@@ -7,7 +7,7 @@ var isGenerator =
     Function.prototype.isGenerator.call.bind(Function.prototype.isGenerator) ||
     (() => false);
 
-export class iter {
+class iter {
   /**
    * An iterable object "functional" helper that provides methods like map and
    * filter.
@@ -140,10 +140,7 @@ function isPlainObject(o) {
   return proto === Object.prototype || proto === null;
 }
 
-
 Object.freeze(iter);
 Object.freeze(iter.prototype);
 
-// FIXME: Why does this register { iter } as well? The result is what I want but
-// I suspect a bug in traceur.
-export default iter;
+export { iter, iter as default };
