@@ -7,6 +7,14 @@ module.exports = function(config) {
     // frameworks to use
     frameworks: ['chai', 'mocha', 'traceur'],
 
+    customLaunchers: {
+      // Provides a consistent testing environment
+      chrome_custom_profile: {
+        base: 'Chrome',
+        flags: ['--user-data-dir=test/.chrome-profile']
+      }
+    },
+
     // list of files / patterns to load in the browser
     files: [
       'src/*.js',
@@ -53,7 +61,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['Chrome'],
+    browsers: ['chrome_custom_profile'],
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,
