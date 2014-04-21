@@ -1,10 +1,11 @@
-__karma__.loaded = function() {};
+__karma__.loaded = function() {
+  Object.keys(__karma__.files)
+    .filter(/.*/.test.bind(/\.spec\.js$/))
+    .map(function(n) { return n.replace(/^\/base\//, '').replace(/\.js$/, '') })
+    .map(function(n) {
+      if (!System.get(n)) throw new Error('Failed to get '+n)
+    });
 
-Object.keys(__karma__.files)
-  .filter(/.*/.test.bind(/\.spec\.js$/))
-  .map(function(n) { return n.replace(/^\/base\//, '').replace(/\.js$/, '') })
-  .forEach(function(n) {
-    System.get(n)
-  });
+  __karma__.start();
+};
 
-__karma__.start();
