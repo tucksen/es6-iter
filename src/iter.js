@@ -1,11 +1,5 @@
 import ObjectIterable from './ObjectIterable';
-
-// TODO: Promise support?
-
-var isGenerator =
-    Function.prototype.isGenerator &&
-    Function.prototype.isGenerator.call.bind(Function.prototype.isGenerator) ||
-    (() => false);
+module types from './types';
 
 class iter {
   /**
@@ -17,11 +11,7 @@ class iter {
   constructor(iterable, ...args) {
     if (!(this instanceof iter)) return new iter(iterable, ...args);
 
-    if (isGenerator(iterable)) {
-      iterable = iterable();
-    }
-
-    if (!iter.isIterable(iterable)) {
+    if (!types.isIterable(iterable) && !types.isGenerator(iterable)) {
       if (isPlainObject(iterable)) {
         iterable = new ObjectIterable(iterable);
       }
@@ -70,15 +60,6 @@ class iter {
 
   *[Symbol.iterator]() {
     for (var value of this._iterable) yield value;
-  }
-
-  /**
-   * Checks for iterability.
-   *
-   * @param {any} test object to test
-   */
-  static isIterable(test) {
-    return test && typeof test[Symbol.iterator] === 'function';
   }
 
   /**
@@ -144,3 +125,4 @@ Object.freeze(iter);
 Object.freeze(iter.prototype);
 
 export { iter, iter as default };
+export * from './types';
