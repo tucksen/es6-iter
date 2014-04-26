@@ -119,7 +119,7 @@ export default iter = class iter {
   constructor(options, iterator, ...args) {
     if (!(this instanceof iter)) return new iter(options, iterator, ...args);
 
-    if (!arguments.length) {
+    if (options == null) {
       throw new TypeError('Expected iter to be called with an iterator');
     }
 

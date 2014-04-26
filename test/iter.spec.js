@@ -73,8 +73,10 @@ describe('iter', () => {
     expect(() => iter(Object.create(null))).to.not.throw()
   })
 
-  it('accepts Arrays/Maps/Sets', () => {
+  it('accepts Arrays/Maps/Sets/Strings', () => {
     expect(() => iter([])).to.not.throw()
+    // FIXME: Strings arent iterable in traceur yet
+    // expect(() => iter('').to.not.throw())
     // FIXME
     //expect(() => iter(new Map)).to.not.throw()
     //expect(() => iter(new Set)).to.not.throw()
@@ -101,8 +103,7 @@ describe('iter', () => {
   })
 
   it('throws a TypeError when passed an object that cannot be coerced to an iterator', () => {
-    // FIXME: Strings should be enumerable in the near future
-    ['', /.*/, null, undefined, (new class {}), (() => {})].forEach(test =>
+    [/.*/, null, undefined, (new class {}), (() => {})].forEach(test =>
       expect(() => iter(test)).to.throw(TypeError)
     )
   })

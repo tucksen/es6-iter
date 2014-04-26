@@ -1,3 +1,12 @@
+var [ hasNativeIteratorSymbol, hasStringIterator ] = [
+  'typeof Symbol() == "symbol" && Symbol.iterator',
+  'typeof (function*(){})()["@@iterator"] === "function"' ].map(testFeature)
+
+if (!hasNativeIteratorSymbol && hasStringIterator) {
+  Symbol = Symbol || function(){};
+  Symbol.iterator = '@@iterator';
+}
+
 export function isGenerator(test) {
   return Function.prototype.isGenerator.call(test);
 }
@@ -58,10 +67,6 @@ Function.prototype.isGenerator = Function.prototype.isGenerator || (function() {
       ? function() { return this instanceof GeneratorFunction }
       : test => false;
 })();
-
-var [ hasNativeIteratorSymbol, hasStringIterator ] = [
-  'typeof Symbol() == "symbol" && Symbol.iterator',
-  'typeof (function*(){})()["@@iterator"] === "function"' ].map(testFeature)
 
 function testFeature(evaled) {
   try {

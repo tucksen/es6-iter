@@ -31,7 +31,7 @@ module.exports = function(config) {
 
     traceurPreprocessor: {
       options: {
-        sourceMap: true,
+        sourceMap: false,
         modules: 'register'
       }
     },
@@ -64,7 +64,7 @@ module.exports = function(config) {
     // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
     // - PhantomJS
     // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-    browsers: ['chrome_custom_profile'],
+    browsers: ['Firefox', 'chrome_custom_profile'],
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000,

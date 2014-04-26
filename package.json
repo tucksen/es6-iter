@@ -26,6 +26,7 @@
     "mocha": "~1.18.2",
     "chai": "~1.9.1",
     "karma-chai": "~0.1.0",
-    "traceur": "0.0.33"
+    "traceur": "0.0.33",
+    "karma-firefox-launcher": "~0.1.3"
   }
 }
