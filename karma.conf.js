@@ -11,7 +11,10 @@ module.exports = function(config) {
       // Provides a consistent testing environment
       chrome_custom_profile: {
         base: 'Chrome',
-        flags: ['--user-data-dir=test/.chrome-profile']
+        flags: [
+          '--user-data-dir=test/.chrome-profile',
+          '--disable-bundled-ppapi-flash'
+        ]
       }
     },
 
