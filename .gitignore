@@ -1,3 +1,5 @@
 node_modules/
 out/
 *.swp
+test/.chrome-profile/**
+!test/.chrome-profile/Local\ State
