@@ -1,0 +1,34 @@
+{
+  "name": "iter",
+  "version": "0.1.0",
+  "homepage": "https://github.com/tucksen/iter",
+  "authors": [
+    "Jesse Tuchsen <tuchsen@hush.com>"
+  ],
+  "description": "Functional programming utility library that works with ES6 iterable objects",
+  "main": "out/system/iter.js",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "es6",
+    "iterable",
+    "iterators",
+    "iterate",
+    "underscore",
+    "lodash",
+    "functional",
+    "programming"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
