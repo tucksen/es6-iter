@@ -2,12 +2,12 @@
   "name": "es6-iter",
   "version": "0.0.0",
   "description": "Functional programming utility library that works with ES6 iterable objects",
-  "main": "out/node/iter.js",
+  "main": "out/commonjs/index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "keywords": [
     "es6",
@@ -26,7 +26,7 @@
     "mocha": "~1.18.2",
     "chai": "~1.9.1",
     "karma-chai": "~0.1.0",
-    "traceur": "0.0.33",
+    "traceur": "0.0.39",
     "karma-firefox-launcher": "~0.1.3"
   }
 }
