@@ -16,6 +16,10 @@
     "iterators",
     "underscore"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tucksen/iter.git"
+  },
   "author": "Jesse Tuchsen",
   "license": "MIT",
   "devDependencies": {
