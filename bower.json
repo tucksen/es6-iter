@@ -31,6 +31,6 @@
     "tests"
   ],
   "dependencies": {
-    "traceur": "https://github.com/google/traceur-compiler.git#~0.0.40"
+    "traceur": "https://github.com/google/traceur-compiler.git#~0.0.39"
   }
 }
