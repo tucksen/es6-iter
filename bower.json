@@ -20,8 +20,7 @@
     "iterate",
     "underscore",
     "lodash",
-    "functional",
-    "programming"
+    "functional programming"
   ],
   "license": "MIT",
   "ignore": [
@@ -30,5 +29,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "traceur": "https://github.com/google/traceur-compiler.git#~0.0.40"
+  }
 }
