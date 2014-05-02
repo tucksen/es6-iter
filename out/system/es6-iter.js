@@ -441,7 +441,7 @@ System.register("es6-iter/iter", [], function() {
   };
 });
 var iter = $traceurRuntime.assertObject(System.get("es6-iter/iter")).iter;
-System.register('es6-iter', function() {
+System.register('es6-iter', [], function() {
   return {
     get iter() {
       return iter;
