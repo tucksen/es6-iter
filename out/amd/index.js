@@ -5,7 +5,7 @@ define(['traceur', './iter'], function($__0,$__1) {
     $__0 = {'default': $__0};
   if (!$__1 || !$__1.__esModule)
     $__1 = {'default': $__1};
-  $__0;
+  var $__3 = $traceurRuntime.assertObject($__0);
   var iter = $traceurRuntime.assertObject($__1).default;
   ;
   return {

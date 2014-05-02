@@ -9,6 +9,6 @@ Object.defineProperties(exports, {
   __esModule: {value: true}
 });
 var __moduleName = "./src/index";
-require('traceur');
+var $__1 = $traceurRuntime.assertObject(require('traceur'));
 var iter = $traceurRuntime.assertObject(require('./iter')).default;
 ;
