@@ -10,12 +10,12 @@ build-cjs: $(MODULES)
 	$(TRACEUR) --modules=commonjs --dir src out/cjs
 
 build-system: $(MODULES) clean
-	ln -s src iter
+	ln -s src es6-iter
 	mkdir -p out/system
-	echo "import iter from './iter/iter';" >> imports.js
-	$(TRACEUR) --modules=register --script imports.js --out iter.js
-	mv iter.js out/system
-	rm -f imports.js iter iter.js
+	cat build/system-template.js >> imports.js
+	$(TRACEUR) --modules=register --script imports.js --out es6-iter.js
+	mv es6-iter.js out/system
+	rm -f imports.js es6-iter es6-iter.js
 
 test:
 	karma start --single-run

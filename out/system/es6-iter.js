@@ -1,7 +1,7 @@
-System.register("iter/ObjectIterable", [], function() {
+System.register("es6-iter/ObjectIterable", [], function() {
   "use strict";
   var $__1;
-  var __moduleName = "iter/ObjectIterable";
+  var __moduleName = "es6-iter/ObjectIterable";
   var ObjectIterable = function ObjectIterable(obj) {
     if (!(this instanceof $ObjectIterable))
       return new $ObjectIterable(obj);
@@ -62,9 +62,9 @@ System.register("iter/ObjectIterable", [], function() {
     }
   };
 });
-System.register("iter/iterators", [], function() {
+System.register("es6-iter/iterators", [], function() {
   "use strict";
-  var __moduleName = "iter/iterators";
+  var __moduleName = "es6-iter/iterators";
   function array(items) {
     return (function() {
       var $__2 = 0,
@@ -209,9 +209,9 @@ System.register("iter/iterators", [], function() {
     }
   };
 });
-System.register("iter/types", [], function() {
+System.register("es6-iter/types", [], function() {
   "use strict";
-  var __moduleName = "iter/types";
+  var __moduleName = "es6-iter/types";
   var $__6 = $traceurRuntime.assertObject(['typeof Symbol() == "symbol" && Symbol.iterator', 'typeof (function*(){})()["@@iterator"] === "function"'].map(testFeature)),
       hasNativeIteratorSymbol = $__6[0],
       hasStringIterator = $__6[1];
@@ -285,12 +285,12 @@ System.register("iter/types", [], function() {
     }
   };
 });
-System.register("iter/iter", [], function() {
+System.register("es6-iter/iter", [], function() {
   "use strict";
-  var __moduleName = "iter/iter";
-  var types = System.get("iter/types");
-  var iterators = System.get("iter/iterators");
-  var ObjectIterable = $traceurRuntime.assertObject(System.get("iter/ObjectIterable")).default;
+  var __moduleName = "es6-iter/iter";
+  var types = System.get("es6-iter/types");
+  var iterators = System.get("es6-iter/iterators");
+  var ObjectIterable = $traceurRuntime.assertObject(System.get("es6-iter/ObjectIterable")).default;
   var iter;
   var $__default = iter = (function() {
     var iter = function iter(options, iterator) {
@@ -440,4 +440,14 @@ System.register("iter/iter", [], function() {
     }
   };
 });
-var iter = $traceurRuntime.assertObject(System.get("iter/iter")).default;
+var iter = $traceurRuntime.assertObject(System.get("es6-iter/iter")).iter;
+System.register('es6-iter', function() {
+  return {
+    get iter() {
+      return iter;
+    },
+    get default() {
+      return iter;
+    }
+  };
+});
