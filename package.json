@@ -1,6 +1,6 @@
 {
   "name": "es6-iter",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Functional programming utility library that works with ES6 iterable objects",
   "main": "out/cjs/index.js",
   "directories": {
