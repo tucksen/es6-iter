@@ -1,26 +1,11 @@
 "use strict";
-Object.defineProperties(exports, {
-  iter: {get: function() {
-      return iter;
-    }},
-  default: {get: function() {
-      return $__default;
-    }},
-  Iterator: {get: function() {
-      return Iterator;
-    }},
-  optionsSymbol: {get: function() {
-      return optionsSymbol;
-    }},
-  Options: {get: function() {
-      return Options;
-    }},
-  __esModule: {value: true}
-});
 var __moduleName = "./src/iter";
 var types = require('./types');
 var iterators = require('./iterators');
-var ObjectIterable = $traceurRuntime.assertObject(require('./ObjectIterable')).default;
+var $__src_47_types__ = require('./types');
+var $__src_47_iterators__ = require('./iterators');
+var ObjectIterable = $traceurRuntime.assertObject(require('./ObjectIterable')).ObjectIterable;
+;
 var iter;
 var $__default = iter = (function() {
   var iter = function iter(options, iterator) {
@@ -152,3 +137,24 @@ function isPlainObject(o) {
 [iter, Iterator, Options].forEach((function(klass) {
   return [klass, klass.prototype].forEach(Object.freeze);
 }));
+module.exports = $traceurRuntime.exportStar({
+  get ObjectIterable() {
+    return ObjectIterable;
+  },
+  get iter() {
+    return iter;
+  },
+  get default() {
+    return $__default;
+  },
+  get Iterator() {
+    return Iterator;
+  },
+  get optionsSymbol() {
+    return optionsSymbol;
+  },
+  get Options() {
+    return Options;
+  },
+  __esModule: true
+}, $__src_47_types__, $__src_47_iterators__);

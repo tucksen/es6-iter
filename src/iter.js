@@ -1,7 +1,11 @@
 module types from './types';
 module iterators from './iterators';
 
-import ObjectIterable from './ObjectIterable';
+export * from './types';
+export * from './iterators';
+
+import { ObjectIterable } from './ObjectIterable';
+export { ObjectIterable };
 
 export var iter;
 export default iter = class iter {

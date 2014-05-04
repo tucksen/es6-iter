@@ -1,22 +1,4 @@
 "use strict";
-Object.defineProperties(exports, {
-  isGenerator: {get: function() {
-      return isGenerator;
-    }},
-  isIterable: {get: function() {
-      return isIterable;
-    }},
-  isIterator: {get: function() {
-      return isIterator;
-    }},
-  getIteratorFunction: {get: function() {
-      return getIteratorFunction;
-    }},
-  setIteratorFunction: {get: function() {
-      return setIteratorFunction;
-    }},
-  __esModule: {value: true}
-});
 var __moduleName = "./src/types";
 var $__0 = $traceurRuntime.assertObject(['typeof Symbol() == "symbol" && Symbol.iterator', 'typeof (function*(){})()["@@iterator"] === "function"'].map(testFeature)),
     hasNativeIteratorSymbol = $__0[0],
@@ -73,3 +55,21 @@ function testFeature(evaled) {
     return false;
   }
 }
+module.exports = {
+  get isGenerator() {
+    return isGenerator;
+  },
+  get isIterable() {
+    return isIterable;
+  },
+  get isIterator() {
+    return isIterator;
+  },
+  get getIteratorFunction() {
+    return getIteratorFunction;
+  },
+  get setIteratorFunction() {
+    return setIteratorFunction;
+  },
+  __esModule: true
+};

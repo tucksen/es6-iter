@@ -1,14 +1,5 @@
 "use strict";
 var $__1;
-Object.defineProperties(exports, {
-  ObjectIterable: {get: function() {
-      return ObjectIterable;
-    }},
-  default: {get: function() {
-      return ObjectIterable;
-    }},
-  __esModule: {value: true}
-});
 var __moduleName = "./src/ObjectIterable";
 var ObjectIterable = function ObjectIterable(obj) {
   if (!(this instanceof $ObjectIterable))
@@ -61,3 +52,12 @@ var $ObjectIterable = ObjectIterable;
 Object.freeze(ObjectIterable);
 Object.freeze(ObjectIterable.prototype);
 ;
+module.exports = {
+  get ObjectIterable() {
+    return ObjectIterable;
+  },
+  get default() {
+    return ObjectIterable;
+  },
+  __esModule: true
+};

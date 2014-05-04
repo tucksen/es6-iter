@@ -1,22 +1,4 @@
 "use strict";
-Object.defineProperties(exports, {
-  array: {get: function() {
-      return array;
-    }},
-  forEach: {get: function() {
-      return forEach;
-    }},
-  filter: {get: function() {
-      return filter;
-    }},
-  grab: {get: function() {
-      return grab;
-    }},
-  take: {get: function() {
-      return take;
-    }},
-  __esModule: {value: true}
-});
 var __moduleName = "./src/iterators";
 function array(items) {
   return (function() {
@@ -144,3 +126,21 @@ function take(items, amount) {
       }
   }, this);
 }
+module.exports = {
+  get array() {
+    return array;
+  },
+  get forEach() {
+    return forEach;
+  },
+  get filter() {
+    return filter;
+  },
+  get grab() {
+    return grab;
+  },
+  get take() {
+    return take;
+  },
+  __esModule: true
+};

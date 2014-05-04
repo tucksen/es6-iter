@@ -290,7 +290,10 @@ System.register("es6-iter/iter", [], function() {
   var __moduleName = "es6-iter/iter";
   var types = System.get("es6-iter/types");
   var iterators = System.get("es6-iter/iterators");
-  var ObjectIterable = $traceurRuntime.assertObject(System.get("es6-iter/ObjectIterable")).default;
+  var $__es6_45_iter_47_types__ = System.get("es6-iter/types");
+  var $__es6_45_iter_47_iterators__ = System.get("es6-iter/iterators");
+  var ObjectIterable = $traceurRuntime.assertObject(System.get("es6-iter/ObjectIterable")).ObjectIterable;
+  ;
   var iter;
   var $__default = iter = (function() {
     var iter = function iter(options, iterator) {
@@ -422,7 +425,10 @@ System.register("es6-iter/iter", [], function() {
   [iter, Iterator, Options].forEach((function(klass) {
     return [klass, klass.prototype].forEach(Object.freeze);
   }));
-  return {
+  return $traceurRuntime.exportStar({
+    get ObjectIterable() {
+      return ObjectIterable;
+    },
     get iter() {
       return iter;
     },
@@ -438,7 +444,7 @@ System.register("es6-iter/iter", [], function() {
     get Options() {
       return Options;
     }
-  };
+  }, $__es6_45_iter_47_types__, $__es6_45_iter_47_iterators__);
 });
 var iter = $traceurRuntime.assertObject(System.get("es6-iter/iter")).iter;
 System.register('es6-iter', [], function() {
